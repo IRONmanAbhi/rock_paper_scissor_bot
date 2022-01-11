@@ -9,20 +9,27 @@ int main()
     {
         cout<<"Enter the no. to Choose one:\n1-Rock\n2-Paper\n3-Scissor\n";    //here 1 represents rock 2 as paper and 3 as scissors
         cin>>p;
-        c=rand()%3;
-        if(c==p)
+        c=rand()%3;                 //here for computer 0 represents rock, 1 paper and 2 scissor
+        if(c==0)
+         cout<<"\nComputer choose Rock.\n";
+        else if(c==1)
+        cout<<"\nComputer choose Paper.\n";
+        else
+        cout<<"\nComputer choose Scissor.\n";
+
+        if((c==0&&p==1)||(c==1&&p==2)||(c==2&&p==3))
         {
-            cout<<"\nIts a draw";
+            cout<<"\nIts a draw\n";
             d++;
         }
-        else if((p==1&&c==2)||(p==2&&c==3)||(p==3)&&c==1)
+        else if((p==1&&c==1)||(p==2&&c==2)||(p==3)&&c==0)
         {
-            cout<<"\nComputer wins !!!! :(";
+            cout<<"\nComputer wins !!!! :(\n";
             l++;
         }
         else
         {
-            cout<<"\nYou won !!!!!! :)";
+            cout<<"\nYou won !!!!!! :)\n";
             w++;
         }
         cout<<"\nDo you wanna play again(y/n): ";
